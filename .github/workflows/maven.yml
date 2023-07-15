@@ -29,12 +29,12 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-    - name: Moving the plugin.
-      run: |
-          mkdir -p /workspaces/king-host-TiketManager/builds
-          mv /workspaces/king-host-TiketManager/target/TicketBot-1.0-SNAPSHOT.jar /workspaces/king-host-TiketManager/builds
+    #- name: Moving the plugin.
+    #  run: |
+    #      mkdir -p /workspaces/king-host-TiketManager/builds
+    #      mv /workspaces/king-host-TiketManager/target/TicketBot-1.0-SNAPSHOT.jar /workspaces/king-host-TiketManager/builds
     - name: Upload artifact
       uses: actions/upload-artifact@v1
       with:
         name: Bot
-        path: builds
+        path: /target/TicketBot-1.0-SNAPSHOT.jar
