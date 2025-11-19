@@ -34,7 +34,7 @@ jobs:
           mkdir -p /home/runner/work/king-host-TiketManager/king-host-TiketManager/builds
           mv /home/runner/work/king-host-TiketManager/king-host-TiketManager/target/TicketBot-1.0-SNAPSHOT.jar /home/runner/work/king-host-TiketManager/king-host-TiketManager/builds
     - name: Upload artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: Bot
         path: builds
